@@ -5,5 +5,5 @@ spring:
         git:
           uri: https://github.com/shamsnezami/shoppingcart.git
           username: shamsnezami
-          password: sham786
+          password: shams786
           search-paths: config-server
