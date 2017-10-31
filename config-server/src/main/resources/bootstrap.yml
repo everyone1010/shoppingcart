@@ -6,4 +6,4 @@ spring:
           uri: https://github.com/shamsnezami/shoppingcart
           username: shamsnezami
           password: shams786
-          search-paths: config
+          searchPaths: config
