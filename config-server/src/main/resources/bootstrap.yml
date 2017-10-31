@@ -3,4 +3,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/shamsnezami/shoppingcart/config-server
+          uri: https://github.com/shamsnezami/shoppingcart.git
+          username: shamsnezami
+          password: sham786
+          search-paths: config-server
