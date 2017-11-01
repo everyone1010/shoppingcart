@@ -1,9 +1,13 @@
 spring: 
+  profiles: 
+    active: native
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/shamsnezami/shoppingcart
-          username: shamsnezami
-          password: shams786
-          searchPaths: config
+        native: 
+          searchLocations: file:///C:/Users/148367/Documents/GitHub/shoppingcart/config
+        #git: 
+          #uri: https://github.com/shamsnezami/shoppingcart/
+          #searchPaths: config 
+          #username: shamsnezami
+          #password: shams786
