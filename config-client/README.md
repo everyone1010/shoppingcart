@@ -19,7 +19,7 @@ Started *Application in 12.87 seconds (JVM running for 13.83)
 
 ## About the Service
 
-For any change in the properties file (shoppingcart.properties) to reflect we need to do a POST on http://localhost:8981/refresh 
+For any change in the properties file (shoppingcart.properties) to reflect we need to do a POST on http://localhost:8981/refresh. Change the spring.profile.active value in config-client to change change the environment.
 The service is as below,
 * GET http://localhost:8981/rest/message 
 
