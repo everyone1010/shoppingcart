@@ -1,5 +1,5 @@
 #default project info followed by actual injected pom-specified values.
-project:
+project: 
   name: cart
   version: 1.0
   description: Cart MicroServices using Spring Boot
@@ -14,6 +14,23 @@ info:
 management:
   security:
     enabled: false
+
+
+    
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8982/eureka/
+  instance:
+    preferIpAddress: true
+spring:
+  application:
+    name: cart
+  cloud:
+    config:
+      enabled: true
     
 #security:
   #basic:
