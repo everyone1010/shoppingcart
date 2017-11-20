@@ -1,4 +1,4 @@
-package com.msn.poc.cart.service;
+package com.msn.poc.user.service;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 /*
  * demonstrates how service-specific properties can be injected
  */
-@ConfigurationProperties(prefix = "cart.service", ignoreUnknownFields = false)
+@ConfigurationProperties(prefix = "user.service", ignoreUnknownFields = false)
 @Component
 public class ServiceProperties {
 

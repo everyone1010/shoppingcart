@@ -1,19 +1,18 @@
-#default project info followed by actual injected pom-specified values.
 project: 
-  name: cart
+  name: user
   version: 1.0
-  description: Cart MicroServices using Spring Boot
-  artifact: com.msn.poc.cart
+  description: User MicroServices using Spring Boot
+  artifact: com.msn.poc.user
 info:
   build:
     artifact: ${project.artifactId}
     name: ${project.name}
     description: ${project.description}
     version: ${project.version}
-    
+
 server:
-  port: 8984
-  
+  port: 8985
+
 management:
   security:
     enabled: false
@@ -30,12 +29,7 @@ eureka:
     preferIpAddress: true
 spring:
   application:
-    name: cart
+    name: user
   cloud:
     config:
       enabled: true
-    
-#security:
-  #basic:
-    #enabled: false
- 

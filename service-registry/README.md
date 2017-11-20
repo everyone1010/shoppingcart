@@ -22,6 +22,7 @@ Started *Application in 12.87 seconds (JVM running for 13.83)
 Service registry endpoint is as below,
 * GET http://localhost:8982/
 * GET http://localhost:8982/eureka/apps/cart 
+* GET http://localhost:8982/eureka/apps/user
 
 
 
