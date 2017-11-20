@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @FeignClient("cart")
 public interface CartFeignClient {
-	@RequestMapping(value = "/v1/cart/getall", method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET, value = "/v1/getall")
 	Set<String> getAll();
 }
