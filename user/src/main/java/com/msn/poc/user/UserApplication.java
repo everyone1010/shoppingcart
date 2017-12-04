@@ -26,13 +26,13 @@ public class UserApplication extends SpringBootServletInitializer{
 	private static final Logger log = LoggerFactory.getLogger(applicationClass);
 
 	public static void main(String[] args) {
-		log.debug("User service");
+		log.debug("#### User Service ####");
 		SpringApplication.run(applicationClass, args);
 	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		log.debug("User SpringApplicationBuilder");
+		log.debug("#### User Service ####");
 		return application.sources(applicationClass);
 	}
 }

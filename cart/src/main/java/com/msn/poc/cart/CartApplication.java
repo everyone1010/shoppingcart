@@ -22,13 +22,13 @@ public class CartApplication extends SpringBootServletInitializer{
 	private static final Logger log = LoggerFactory.getLogger(applicationClass);
 
 	public static void main(String[] args) {
-		log.debug("Cart service");
+		log.debug("#### Cart service ####");
 		SpringApplication.run(applicationClass, args);
 	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		log.debug("Cart SpringApplicationBuilder");
+		log.debug("#### Cart service ####");
 		return application.sources(applicationClass);
 	}
 }

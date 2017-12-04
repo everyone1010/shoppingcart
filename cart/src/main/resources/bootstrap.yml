@@ -1,0 +1,35 @@
+project: 
+  name: cart
+  version: 1.0
+  description: Cart MicroServices using Spring Boot
+  artifact: com.msn.poc.cart
+info:
+  build:
+    artifact: ${project.artifactId}
+    name: ${project.name}
+    description: ${project.description}
+    version: ${project.version}
+  
+management:
+  security:
+    enabled: false
+    
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8983/eureka/
+  instance:
+    preferIpAddress: true
+spring:
+  application:
+    name: ${project.name}
+  cloud:
+    config:
+      enabled: true
+    
+#security:
+  #basic:
+    #enabled: false
+ 

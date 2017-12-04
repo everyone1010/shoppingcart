@@ -1,6 +1,6 @@
 # CART "Microservice" using Spring Boot, Swagger and MySQL
 
-This is a sample Java / Gradle Buildship 2x / Spring Boot (version 1.5.6) application demonstrating Microservices, JPA, Swagger with built-in health check, metrics using Spring Actuator.
+This is a sample Java / Gradle Buildship 2x / Spring Boot (version 1.5.6) application demonstrating Microservices, JPA, Swagger with built-in health check, metrics using Spring Actuator and Feign Client.
 
 ## How to Run 
 * Clone this repository 
@@ -19,7 +19,7 @@ Started *Application in 12.87 seconds (JVM running for 13.83)
 
 ## About the Service
 
-The service is a simple cart microservice. Check swagger URL http://HOSTNAME:PORT/swagger-ui.html for API docs (port:8985).
+The service is a simple cart microservice. Check swagger URL http://HOSTNAME:PORT/swagger-ui.html for API docs (port:8986).
 * POST /v1/add/{cartid} Adds item to the provided cartid else creates a new cartid and adds item to it.
 * DELETE /v1/clear/{cartid} Removes all items from the provided cartid.
 * DELETE /v1/clearall Remove all the carts.
@@ -62,16 +62,7 @@ This application is integrated with Spring Actuator which gives the following en
 
 # Questions and Comments: shamsnezami@gmail.com
 
-# Few useful links
-https://piotrminkowski.wordpress.com/
 
-https://piotrminkowski.wordpress.com/2017/02/05/part-1-creating-microservice-using-spring-cloud-eureka-and-zuul/
-
-https://piotrminkowski.wordpress.com/2017/04/05/part-2-creating-microservices-monitoring-with-spring-cloud-sleuth-elk-and-zipkin/
-
-https://developer.okta.com/blog/2017/06/15/build-microservices-architecture-spring-boot
-
-https://dzone.com/articles/microservice-architecture-with-spring-cloud-and-do
 
 
 

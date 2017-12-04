@@ -1,4 +1,4 @@
-# Config-client
+# Config-server
 
 This is a sample Java / Gradle Buildship 2x / Spring Boot (version 1.5.6) application demonstrating config client
 
@@ -19,9 +19,9 @@ Started *Application in 12.87 seconds (JVM running for 13.83)
 
 ## About the Service
 
-For any change in the properties file (shoppingcart.properties) to reflect we need to do a POST on http://localhost:8982/refresh. Change the spring.profile.active value in config-client to change change the environment.
-The service is as below,
-* GET http://localhost:8982/rest/message 
+Service registry endpoint is as below,
+* GET http://localhost:8984/routes
+* Now one can call GET http://localhost:8984/user/v1/getcart (API Gateway) instead of http://localhost:8986/v1/getcart (directly)
 
 ## About the other endpoints to manage and monitor the Spring Boot application
 
