@@ -7,9 +7,11 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -18,10 +20,13 @@ import org.springframework.web.client.RestTemplate;
 import com.msn.poc.user.UserApplication;
 
 @EnableEurekaClient
+//TODO UNCOMMENT TO ENABLE FEIGN CLIENT
 //@EnableFeignClients
 @SpringBootApplication
 @Configuration
 @EnableAutoConfiguration
+@EnableCircuitBreaker
+@EnableHystrixDashboard
 @ComponentScan(basePackages = "com.msn.poc.user")
 public class UserApplication extends SpringBootServletInitializer{
 

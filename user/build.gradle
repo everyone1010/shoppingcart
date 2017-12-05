@@ -43,9 +43,17 @@ dependencies {
 	compile('org.springframework.cloud:spring-cloud-starter-eureka')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	
+	/*
+	  TODO UNCOMMENT TO ENABLE FEIGN CLIENT
+	*/
 	/*
 	compile('org.springframework.cloud:spring-cloud-starter-feign')
 	*/
+	
+	compile('org.springframework.cloud:spring-cloud-starter-hystrix')
+	compile('org.springframework.cloud:spring-cloud-starter-hystrix-dashboard')
+	compile('com.netflix.hystrix:hystrix-javanica:1.5.9')
 }
 
 dependencyManagement {
