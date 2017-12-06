@@ -1,8 +1,8 @@
 project: 
-  name: user
+  name: zipkinserver
   version: 1.0
   description: User MicroServices using Spring Boot
-  artifact: com.msn.poc.user
+  artifact: com.msn.poc.tracing
 info:
   build:
     artifact: ${project.artifactId}
@@ -14,20 +14,10 @@ management:
   security:
     enabled: false
 
-eureka:
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:8983/eureka/
-  instance:
-    preferIpAddress: true
+
 spring:
   application:
     name: ${project.name}
   cloud:
     config:
       enabled: true
-
-  zipkin:
-    base-url: http://localhost:8985

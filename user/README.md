@@ -1,6 +1,6 @@
 # CART "Microservice" using Spring Boot, Swagger and MySQL
 
-This is a sample Java / Gradle Buildship 2x / Spring Boot (version 1.5.6) application demonstrating Microservices, JPA, Swagger with built-in health check, metrics using Spring Actuator and service to service call without knowing IP/PORT using Ribbon/Feign(commented out). Hystrix circuitbreaker, fallback and bulkhead used for resilience (Hystrix dashboard integrated).
+This is a sample Java / Gradle Buildship 2x / Spring Boot (version 1.5.6) application demonstrating Microservices, JPA, Swagger with built-in health check, metrics using Spring Actuator and service to service call without knowing IP/PORT using Ribbon/Feign(commented out). Hystrix circuitbreaker, fallback and bulkhead used for resilience (Hystrix dashboard integrated). Sleuth and Zipkin is alo integrated.
 
 ## How to Run 
 * Clone this repository 
@@ -62,7 +62,10 @@ This application is integrated with Spring Actuator which gives the following en
 
 ## Hystrix dashboard
 http://IP:PORT/hystrix
-Type http://IP:PORT/hystrix.stream, 5000, user and click monitor stream to view the dashboard
+Type http://IP:PORT/hystrix.stream, 5000, USER and click monitor stream to view the dashboard
+
+## Zipkin dashboard
+http://IP&PORT(of Zipkin server)
 
 # Questions and Comments: shamsnezami@gmail.com
 

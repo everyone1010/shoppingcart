@@ -3,8 +3,12 @@ package com.msn.poc.user.controller;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
+
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
@@ -25,7 +29,7 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping(value = "/v1/")
 @Api(tags = { "cartconsumer" })
 public class CartConsumerController extends AbstractRestHandler {
-
+	private static Logger log = LoggerFactory.getLogger(CartConsumerController.class);
 	//TODO UNCOMMENT TO ENABLE FEIGN CLIENT
 	// @Autowired
 	// CartFeignClient cartFeignClient;
@@ -62,6 +66,7 @@ public class CartConsumerController extends AbstractRestHandler {
 		};
 		ResponseEntity<Set<String>> restExchange = restTemplate.exchange("http://cart/v1/getall", HttpMethod.GET, null,
 				parameterizedTypeReference);
+		log.info("#### CartConsumerController->getCart");
 		return restExchange.getBody();
 	}
 	
