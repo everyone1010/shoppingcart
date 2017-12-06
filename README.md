@@ -1,5 +1,5 @@
 # Shoppingcart
-This is a generic shoppingcart app uing the following.
+This is a generic shoppingcart app using the following frameworks.
 
 ## Developement Pattern
 * Spring Boot for Core microservices pattern
