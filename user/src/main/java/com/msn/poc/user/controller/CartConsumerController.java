@@ -64,9 +64,10 @@ public class CartConsumerController extends AbstractRestHandler {
 		
 		ParameterizedTypeReference<Set<String>> parameterizedTypeReference = new ParameterizedTypeReference<Set<String>>() {
 		};
+		log.info("#### CartConsumerController->getCart start");
 		ResponseEntity<Set<String>> restExchange = restTemplate.exchange("http://cart/v1/getall", HttpMethod.GET, null,
 				parameterizedTypeReference);
-		log.info("#### CartConsumerController->getCart");
+		log.info("#### CartConsumerController->getCart end");
 		return restExchange.getBody();
 	}
 	

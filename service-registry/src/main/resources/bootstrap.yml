@@ -3,8 +3,12 @@ spring:
     name: service-registry
     
 eureka:
+  instance:
+    preferIpAddress: true
   client:
     registerWithEureka: false 
     fetchRegistry: false 
     server: 
       waitTimeInMsWhenSyncEmpty: 0
+    serviceUrl: 
+      defaultZone: http://localhost:8983/eureka/

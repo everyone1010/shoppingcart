@@ -21,7 +21,7 @@ Started *Application in 12.87 seconds (JVM running for 13.83)
 
 Service registry endpoint is as below,
 * GET http://localhost:8984/routes
-* Now one can call GET http://localhost:8984/user/v1/getcart (API Gateway) instead of http://localhost:8986/v1/getcart (directly)
+* Now one can call GET http://localhost:8984/user/v1/getcart (API Gateway) instead of http://localhost:8987/v1/getcart (directly)
 
 ## About the other endpoints to manage and monitor the Spring Boot application
 

@@ -19,7 +19,7 @@ Started *Application in 12.87 seconds (JVM running for 13.83)
 
 ## About the Service
 
-The service is a simple cart microservice. Check swagger URL http://HOSTNAME:PORT/swagger-ui.html for API docs (port:8986).
+The service is a simple cart microservice. Check swagger URL http://HOSTNAME:PORT/swagger-ui.html for API docs (port:8987).
 * POST /v1/add/{cartid} Adds item to the provided cartid else creates a new cartid and adds item to it.
 * DELETE /v1/clear/{cartid} Removes all items from the provided cartid.
 * DELETE /v1/clearall Remove all the carts.

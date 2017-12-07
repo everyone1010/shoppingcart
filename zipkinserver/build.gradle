@@ -10,12 +10,15 @@ buildscript {
 	}
 }
 
+/*
 apply plugin: 'java'
+*/
+apply plugin: 'war'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
 group = 'com.msn.poc.tracing'
-version = '0.0.1-SNAPSHOT'
+version = '1.0'
 sourceCompatibility = 1.8
 
 repositories {
@@ -34,6 +37,7 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	compile('io.zipkin.java:zipkin-server')
 	compile('io.zipkin.java:zipkin-autoconfigure-ui')
+	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 }
 
 dependencyManagement {
