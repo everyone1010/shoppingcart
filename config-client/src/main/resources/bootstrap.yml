@@ -11,3 +11,4 @@ management:
   security:
     enabled: false
           
+redishost: ${message}
