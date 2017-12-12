@@ -24,11 +24,10 @@ repositories {
 
 
 ext {
-	springCloudVersion = 'Dalston.SR4'
+	springCloudVersion = 'Camden.SR5'
 }
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.cloud:spring-cloud-starter-config')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')

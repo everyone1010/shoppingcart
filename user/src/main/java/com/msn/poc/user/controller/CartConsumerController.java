@@ -1,11 +1,7 @@
 package com.msn.poc.user.controller;
 
 import java.util.HashSet;
-import java.util.Random;
 import java.util.Set;
-
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 //TODO UNCOMMENT TO ENABLE FEIGN CLIENT
 //import com.msn.poc.user.feignclient.CartFeignClient;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -55,18 +54,11 @@ public class CartConsumerController extends AbstractRestHandler {
 	public Set<String> getCart() {
 		//TODO UNCOMMENT TO ENABLE FEIGN CLIENT
 		// return cartFeignClient.getAll();
-		
-//		Random rand = new Random();
-//		int randomNumber = rand.nextInt((3-1)+1)+1;
-//		if(randomNumber == 3) {
-//			sleep();
-//		}
-		
 		ParameterizedTypeReference<Set<String>> parameterizedTypeReference = new ParameterizedTypeReference<Set<String>>() {
 		};
 		log.info("#### CartConsumerController->getCart start");
-		ResponseEntity<Set<String>> restExchange = restTemplate.exchange("http://cart/v1/getall", HttpMethod.GET, null,
-				parameterizedTypeReference);
+		ResponseEntity<Set<String>> restExchange = restTemplate.exchange("http://cart/v1/getall", HttpMethod.GET, null, parameterizedTypeReference);
+		//ResponseEntity<Set<String>> restExchange = restTemplate.exchange("http://cart-serv.ca-central-1.elasticbeanstalk.com/v1/getall", HttpMethod.GET, null, parameterizedTypeReference);
 		log.info("#### CartConsumerController->getCart end");
 		return restExchange.getBody();
 	}

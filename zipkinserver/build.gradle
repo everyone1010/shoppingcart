@@ -27,7 +27,7 @@ repositories {
 
 
 ext {
-	springCloudVersion = 'Edgware.RELEASE'
+	springCloudVersion = 'Camden.SR5'
 }
 
 dependencies {

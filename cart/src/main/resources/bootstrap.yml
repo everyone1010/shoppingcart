@@ -15,13 +15,14 @@ management:
     enabled: false
     
 eureka:
-  instance:
-    preferIpAddress: true 
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8983/eureka/
+      #defaultZone: http://serviceregistry.us-east-2.elasticbeanstalk.com/eureka/
+      #defaultZone: https://msnserviceregistry.cfapps.io/eureka/
+      
 spring:
   application:
     name: ${project.name}

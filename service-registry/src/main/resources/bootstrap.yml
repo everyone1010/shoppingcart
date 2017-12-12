@@ -3,12 +3,11 @@ spring:
     name: service-registry
     
 eureka:
-  instance:
-    preferIpAddress: true
   client:
     registerWithEureka: false 
     fetchRegistry: false 
-    server: 
-      waitTimeInMsWhenSyncEmpty: 0
-    serviceUrl: 
-      defaultZone: http://localhost:8983/eureka/
+    #serviceUrl: 
+      #defaultZone: http://localhost:8983/eureka/
+      #defaultZone: http://serviceregistry.us-east-2.elasticbeanstalk.com/eureka/
+      #defaultZone: https://msnserviceregistry.cfapps.io/eureka/
+      

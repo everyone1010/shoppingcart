@@ -3,8 +3,6 @@ package com.msn.poc.cart.controller;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +21,6 @@ import io.swagger.annotations.ApiOperation;
 public class CartController extends AbstractRestHandler {
 
 	private static final Class<CartController> clasz = CartController.class;
-	private static final Logger log = LoggerFactory.getLogger(clasz);
 
 	@Autowired
 	ObjectMapper objectMapper;

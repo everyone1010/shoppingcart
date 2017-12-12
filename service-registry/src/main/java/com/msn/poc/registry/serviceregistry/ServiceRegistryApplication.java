@@ -9,8 +9,8 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 
-@EnableEurekaServer
 @SpringBootApplication
+@EnableEurekaServer
 public class ServiceRegistryApplication extends SpringBootServletInitializer{
 
 	private static final Class<ServiceRegistryApplication> applicationClass = ServiceRegistryApplication.class;

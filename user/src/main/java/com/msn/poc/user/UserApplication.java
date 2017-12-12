@@ -20,10 +20,11 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
-@EnableEurekaClient
+
 // TODO UNCOMMENT TO ENABLE FEIGN CLIENT
 // @EnableFeignClients
 @SpringBootApplication
+@EnableEurekaClient
 @Configuration
 @EnableAutoConfiguration
 @EnableCircuitBreaker
