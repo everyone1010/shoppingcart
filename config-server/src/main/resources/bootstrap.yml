@@ -11,3 +11,6 @@ spring:
           #searchPaths: config 
           #username: shamsnezami
           #password: shams786
+management:
+  security:
+    enabled: false
