@@ -5,12 +5,10 @@ spring:
     config:
       server:
         native: 
-          searchLocations: file:///C:/Users/148367/Documents/GitHub/shoppingcart/config
+          searchLocations: file:///C:/Users/408183/GitLab/Base/SpringCloud/Configurations
         #git: 
           #uri: https://github.com/shamsnezami/shoppingcart/
           #searchPaths: config 
-          #username: shamsnezami
-          #password: shams786
 management:
   security:
     enabled: false
